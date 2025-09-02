@@ -1,57 +1,74 @@
 body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background: black;
-      height: 100vh;
-      margin: 0;
-      overflow: hidden;
-      font-family: Bahnschrift, sans-serif;
-    }
-    canvas {
-      background: black;
-      border: 2px solid #555;
-    }
-    #overlay {
-      position: absolute;
-      text-align: center;
-      color: white;
-      font-size: 24px;
-    }
-    .title {
-      font-size: 40px;
-      margin: 20px;
-    }
-    .btn {
-      margin: 10px;
-      padding: 10px 20px;
-      background: #222;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: Bahnschrift, sans-serif;
+  }
+  canvas {
+    background: black;
+    border: 2px solid #00c800;
+    max-width: 95vw;   /* responsive width */
+    max-height: 60vh;  /* responsive height */
+  }
+  #overlay {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+  }
+  .title {
+    font-size: 40px;
+    margin: 20px;
+  }
+  .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #00c800;
+    border-radius: 8px;
+    cursor: pointer;
+  }
 
-    /* Control buttons */
+  /* Control buttons */
+  #controls {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px;
+    gap: 8px;
+    justify-content: center;
+  }
+  #controls button {
+    background: #333;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #controls button:active {
+    background: #555;
+  }
+  #controls .empty {
+    background: transparent;
+    pointer-events: none;
+  }
+
+  /* Mobile-friendly */
+  @media (max-width: 768px) {
+    canvas {
+      max-height: 50vh;
+    }
     #controls {
-      margin-top: 10px;
-      display: grid;
-      grid-template-columns: 60px 60px 60px;
-      grid-template-rows: 60px 60px 60px;
-      gap: 8px;
-      justify-content: center;
+      grid-template-columns: 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px;
+      gap: 6px;
     }
     #controls button {
-      background: #333;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
+      font-size: 18px;
     }
-    #controls button:active {
-      background: #555;
-    }
-    #controls .empty {
-      background: transparent;
-      pointer-events: none;
-    }
+  }
