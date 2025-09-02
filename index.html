@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>🐍 Snake Game</title>
-  <link rel="stylesheet" href="snake.css"> 
+  <title>Snake Game 🐍</title>
+  <link href="snake.css" rel="stylesheet">
 </head>
 <body>
-  <canvas id="gameCanvas" width="600" height="400"></canvas>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
   <div id="overlay"></div>
 
-  <script src="snake.js"></script> 
-</body>
+  <!-- Arrow control buttons -->
+  <div id="controls">
+    <div class="empty"></div>
+    <button id="btnUp">⬆️</button>
+    <div class="empty"></div>
+    <button id="btnLeft">⬅️</button>
+    <div class="empty"></div>
+    <button id="btnRight">➡️</button>
+    <div class="empty"></div>
+    <button id="btnDown">⬇️</button>
+    <div class="empty"></div>
+  </div>
+
+  </body>
+  <script src="snake.js"></script>
 </html>
